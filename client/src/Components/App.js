@@ -24,17 +24,12 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-const Container = styled.div`
-	width: 100%;
-	display: flex;
-`;
 
 const App = () => (
-	<Container>
+	<Fragment>
 		<GlobalStyle />
-		<Nav />
 		<Router />
-	</Container>
+	</Fragment>
 );
 
 export default App;
