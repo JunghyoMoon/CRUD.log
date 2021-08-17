@@ -8,10 +8,13 @@ const Container = styled.div`
 	background-color: #6F1E51;
 	padding: 12px 0px;
 	border-radius: 7px;
-	width: 100%;
+	width: 87%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 10;
 `;
 
 const Title = styled.h1`
@@ -26,6 +29,7 @@ const Items = styled.ul`
 `;
 
 const Item = styled.li`
+	z-index: 5;
 	font-size: 30px;
 	margin-right: 30px;
 	opacity: 1;

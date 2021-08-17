@@ -5,10 +5,17 @@ import { Link } from "react-router-dom";
 
 const Container = styled.nav`
 	width: 15%;
+	height: 100%;
+`;
+
+const Wrapper = styled.div`
+	width: 13%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	overflow: scroll;
+	position: fixed;
 `;
 
 const Title = styled.h3`
@@ -40,32 +47,34 @@ const Item = styled.section`
 
 // todo : 조작성 향상을 위해 Link를 Item 바깥으로 뺄 것.
 const Nav = () => <Container>
-	<Title>Categories</Title>
-	<Item>
-		<Link to="/">
-			<span>All</span>
-		</Link>
-	</Item>
-	<Item>
-		<Link to="/">
-			<span>HTML, CSS</span>
-		</Link>
-	</Item>
-	<Item>
-		<Link to="/">
-			<span>MySQL</span>
-		</Link>
-	</Item>
-	<Item>
-		<Link to="/">
-			<span>React</span>
-		</Link>
-	</Item>
-	<Item>
-		<Link to="/">
-			<span>Personal</span>
-		</Link>
-	</Item>
+	<Wrapper>
+		<Title>Categories</Title>
+		<Item>
+			<Link to="/">
+				<span>All</span>
+			</Link>
+		</Item>
+		<Item>
+			<Link to="/">
+				<span>HTML, CSS</span>
+			</Link>
+		</Item>
+		<Item>
+			<Link to="/">
+				<span>MySQL</span>
+			</Link>
+		</Item>
+		<Item>
+			<Link to="/">
+				<span>React</span>
+			</Link>
+		</Item>
+		<Item>
+			<Link to="/">
+				<span>Personal</span>
+			</Link>
+		</Item>
+	</Wrapper>
 </Container>;
 
 export default withRouter(Nav);
