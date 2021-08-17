@@ -7,10 +7,10 @@
 
 아래와 같은 라우터를 생각하고 있습니다. (페이지만)
 
-/
-/login
-/create
-/search
-/category/:categoryname(or id)
-/edit/:id
-/details/:id
+/  
+/login  
+/create  
+/search  
+/category/:categoryname(or id)  
+/edit/:id  
+/details/:id  
