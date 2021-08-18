@@ -1,6 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DetailsPresenter from "./DetailsPresenter";
 
-const DetailsContainer = () => <DetailsPresenter />;
+class DetailsContainer extends React.Component {
+	state = {};
+
+	render() {
+		return <DetailsPresenter />;
+	}
+}
 
 export default DetailsContainer;

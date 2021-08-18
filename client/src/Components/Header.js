@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import { FaEdit, FaSistrix, FaKey } from "react-icons/fa";
+import palette from "../palette";
 
 const Container = styled.header`
-	background-color: #6f1e51;
+	background-color: ${palette.headerBg};
 	padding: 12px 0px;
 	border-radius: 7px;
 	width: 87%;

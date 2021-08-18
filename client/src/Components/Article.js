@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import palette from "../palette";
 
 const Container = styled.article`
 	font-size: 15px;
@@ -30,7 +31,7 @@ const Title = styled.h1`
 const Info = styled.div`
 	padding: 15px;
 	border-radius: 4px;
-	background-color: #181a1b;
+	background-color: ${palette.articleBg};
 `;
 
 const Desc = styled.p`

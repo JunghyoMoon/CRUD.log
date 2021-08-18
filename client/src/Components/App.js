@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import Nav from "./Nav";
 import Router from "./Router";
+import palette from "../palette";
 
 const GlobalStyle = createGlobalStyle`
     ${reset}
@@ -20,11 +20,10 @@ const GlobalStyle = createGlobalStyle`
             Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         font-size: 12px;
         width: 100vw;
-        background-color: #282B2D;
-        color: white;
+        background-color: ${palette.mainBg};
+        color: ${palette.white};
     }
 `;
-
 
 const App = () => (
 	<Fragment>
