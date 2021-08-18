@@ -4,8 +4,8 @@ import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import { FaEdit, FaSistrix, FaKey } from "react-icons/fa";
 
-const Container = styled.div`
-	background-color: #6F1E51;
+const Container = styled.header`
+	background-color: #6f1e51;
 	padding: 12px 0px;
 	border-radius: 7px;
 	width: 87%;
@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 	margin-left: 25px;
 	font-size: 3em;
 `;
@@ -42,20 +42,29 @@ const Item = styled.li`
 	transition: opacity 0.2s ease-in-out;
 `;
 
-const Header = () => <Container>
-	{/* add link to home */}
-	<Title>CRUD.log</Title>
-	<Items>
-		<Item>
-			<Link to="/"><FaEdit /></Link>
-		</Item>
-		<Item>
-			<Link to="/"><FaSistrix /></Link>
-		</Item>
-		<Item>
-			<Link to="/"><FaKey /></Link>
-		</Item>
-	</Items>
-</Container>;
+const Header = () => (
+	<Container>
+		<Link to="/">
+			<Title>CRUD.log</Title>
+		</Link>
+		<Items>
+			<Item>
+				<Link to="/">
+					<FaEdit />
+				</Link>
+			</Item>
+			<Item>
+				<Link to="/">
+					<FaSistrix />
+				</Link>
+			</Item>
+			<Item>
+				<Link to="/">
+					<FaKey />
+				</Link>
+			</Item>
+		</Items>
+	</Container>
+);
 
 export default withRouter(Header);

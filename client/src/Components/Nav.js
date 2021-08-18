@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	overflow: scroll;
 	position: fixed;
 `;
 
@@ -38,43 +37,44 @@ const Item = styled.section`
 		transition: box-shadow 0.2s ease-in-out;
 
 		&:hover {
-			box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, -5px 10px 28px 5px rgba(0,0,0,0);
+			box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px,
+				-5px 10px 28px 5px rgba(0, 0, 0, 0);
 		}
 	}
-
-	
 `;
 
 // todo : 조작성 향상을 위해 Link를 Item 바깥으로 뺄 것.
-const Nav = () => <Container>
-	<Wrapper>
-		<Title>Categories</Title>
-		<Item>
-			<Link to="/">
-				<span>All</span>
-			</Link>
-		</Item>
-		<Item>
-			<Link to="/">
-				<span>HTML, CSS</span>
-			</Link>
-		</Item>
-		<Item>
-			<Link to="/">
-				<span>MySQL</span>
-			</Link>
-		</Item>
-		<Item>
-			<Link to="/">
-				<span>React</span>
-			</Link>
-		</Item>
-		<Item>
-			<Link to="/">
-				<span>Personal</span>
-			</Link>
-		</Item>
-	</Wrapper>
-</Container>;
+const Nav = () => (
+	<Container>
+		<Wrapper>
+			<Title>Categories</Title>
+			<Item>
+				<Link to="/">
+					<span>All</span>
+				</Link>
+			</Item>
+			<Item>
+				<Link to="/">
+					<span>HTML, CSS</span>
+				</Link>
+			</Item>
+			<Item>
+				<Link to="/">
+					<span>MySQL</span>
+				</Link>
+			</Item>
+			<Item>
+				<Link to="/">
+					<span>React</span>
+				</Link>
+			</Item>
+			<Item>
+				<Link to="/">
+					<span>Personal</span>
+				</Link>
+			</Item>
+		</Wrapper>
+	</Container>
+);
 
 export default withRouter(Nav);
