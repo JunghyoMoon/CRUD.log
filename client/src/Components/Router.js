@@ -8,6 +8,9 @@ import Nav from "./Nav";
 import Home from "../Routes/Home";
 import Login from "../Routes/Login";
 import Details from "../Routes/Details";
+import Edit from "../Routes/Edit";
+import Create from "../Routes/Create";
+import Search from "../Routes/Search";
 
 const Container = styled.div`
 	width: 100%;
@@ -30,12 +33,12 @@ const Router = () => (
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route path="/login" component={Login} />
+					<Route path="/search" component={Search} />
+					<Route path="/create" component={Create} />
 					{/* todo: category/:category */}
-					{/* todo: write */}
-					{/* todo: search */}
-					{/* todo: edit/:id */}
+					<Route path="/edit/:id" component={Edit} />
 					<Route path="/details/:id" component={Details} />
-					<Redirect to="/" />
+					<Redirect from="*" to="/" />
 				</Switch>
 			</Article>
 		</Container>
