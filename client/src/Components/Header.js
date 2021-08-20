@@ -50,17 +50,17 @@ const Header = () => (
 		</Link>
 		<Items>
 			<Item>
-				<Link to="/">
+				<Link to="/create">
 					<FaEdit />
 				</Link>
 			</Item>
 			<Item>
-				<Link to="/">
+				<Link to="/search">
 					<FaSistrix />
 				</Link>
 			</Item>
 			<Item>
-				<Link to="/">
+				<Link to="/login">
 					<FaKey />
 				</Link>
 			</Item>

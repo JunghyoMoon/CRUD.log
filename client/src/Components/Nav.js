@@ -34,12 +34,6 @@ const Item = styled.section`
 		font-size: 2em;
 		width: 100%;
 		margin: 15px 0px;
-		transition: box-shadow 0.2s ease-in-out;
-
-		&:hover {
-			box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px,
-				-5px 10px 28px 5px rgba(0, 0, 0, 0);
-		}
 	}
 `;
 
