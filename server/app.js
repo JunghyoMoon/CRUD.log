@@ -1,7 +1,8 @@
 import express from "express";
 import axios from "axios";
+import Article from "../client/src/Components/Article";
 
-const PORT = 3001;
+const PORT = 4000;
 const app = express();
 
 app.get("/", (req, res) => {

@@ -4,8 +4,10 @@ const DB = {
 		{
 			id: 1,
 			title: "",
+			author: "",
 			imgUrl: "",
-			description: "",
+			content: "",
+			
 		},
 		{
 			id: 2,
