@@ -2,39 +2,42 @@ import React from "react";
 import styled from "styled-components";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
+import palette from "../palette";
 
 const Container = styled.nav`
-	width: 15%;
+	width: 100%;
 	height: 100%;
+	min-width: 150px;
+	background-color: ${palette.articleBg};
 `;
 
 const Wrapper = styled.div`
-	width: 13%;
+	width: 15vw;
+	position: fixed;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	position: fixed;
+	align-items: flex-start;
 `;
 
 const Title = styled.h3`
-	margin: 30px;
+	margin: 30px 0px;
 	font-size: 1.5em;
+	align-self: center;
 `;
 
-const Item = styled.section`
-	width: 90%;
-	padding: 10px;
-	padding-left: 20px;
-	margin-bottom: 20px;
-	border-radius: 5px;
-	opacity: 1;
+const StyledLink = styled(Link)`
+	width: 100%;
 
-	span {
-		font-size: 2em;
-		width: 100%;
-		margin: 15px 0px;
+	&:hover {
+		background-color: ${palette.mainBg};
 	}
+`;
+
+const Item = styled.div`
+	width: 100%;
+	padding: 20px;
+	font-size: 20px;
+	text-align: left;
 `;
 
 // todo : 조작성 향상을 위해 Link를 Item 바깥으로 뺄 것.
@@ -42,31 +45,21 @@ const Nav = () => (
 	<Container>
 		<Wrapper>
 			<Title>Categories</Title>
-			<Item>
-				<Link to="/">
-					<span>All</span>
-				</Link>
-			</Item>
-			<Item>
-				<Link to="/">
-					<span>HTML, CSS</span>
-				</Link>
-			</Item>
-			<Item>
-				<Link to="/">
-					<span>MySQL</span>
-				</Link>
-			</Item>
-			<Item>
-				<Link to="/">
-					<span>React</span>
-				</Link>
-			</Item>
-			<Item>
-				<Link to="/">
-					<span>Personal</span>
-				</Link>
-			</Item>
+			<StyledLink to="/">
+				<Item>All</Item>
+			</StyledLink>
+			<StyledLink to="/">
+				<Item>HTML, CSS</Item>
+			</StyledLink>
+			<StyledLink to="/">
+				<Item>React</Item>
+			</StyledLink>
+			<StyledLink to="/">
+				<Item>MySQL</Item>
+			</StyledLink>
+			<StyledLink to="/">
+				<Item>Personal</Item>
+			</StyledLink>
 		</Wrapper>
 	</Container>
 );

@@ -5,6 +5,12 @@ import palette from "../palette";
 
 const Container = styled.article`
 	font-size: 15px;
+	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+
+	&:hover {
+		opacity: 0.6;
+	}
 `;
 
 const Main = styled.div`
