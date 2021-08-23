@@ -14,11 +14,33 @@ import Search from "../Routes/Search";
 
 const Container = styled.div`
 	width: 100%;
-	display: flex;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 15vw 85vw;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"nav content"
+		"nav content";
+
+	@media screen and (max-width: 1000px) {
+		grid-template-columns: 100vw;
+		grid-template-areas:
+			"content"
+			"content";
+	}
 `;
 
-const Article = styled.section`
+const NavWrapper = styled.div`
+	grid-area: nav;
 	width: 100%;
+
+	@media screen and (max-width: 1000px) {
+		display: none;
+	}
+`;
+
+const Content = styled.div`
+	grid-area: content;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -27,8 +49,10 @@ const Article = styled.section`
 const Router = () => (
 	<HashRouter>
 		<Container>
-			<Nav />
-			<Article>
+			<NavWrapper>
+				<Nav />
+			</NavWrapper>
+			<Content>
 				<Header />
 				<Switch>
 					<Route path="/" exact component={Home} />
@@ -40,7 +64,7 @@ const Router = () => (
 					<Route path="/details/:id" component={Details} />
 					<Redirect from="*" to="/" />
 				</Switch>
-			</Article>
+			</Content>
 		</Container>
 	</HashRouter>
 );

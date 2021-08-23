@@ -6,27 +6,40 @@ import { FaEdit, FaSistrix, FaKey } from "react-icons/fa";
 import palette from "../palette";
 
 const Container = styled.header`
+	position: fixed;
+	width: 85vw;
 	background-color: ${palette.headerBg};
 	padding: 12px 0px;
 	border-radius: 7px;
-	width: 87%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	box-sizing: border-box;
-	position: fixed;
 	z-index: 10;
+
+	@media screen and (max-width: 1000px) {
+		width: 100vw;
+		flex-direction: column;
+	}
 `;
 
 const Title = styled.h1`
 	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 	margin-left: 25px;
 	font-size: 3em;
+	@media screen and (max-width: 1000px) {
+		margin-bottom: 15px;
+	}
 `;
 
 const Items = styled.ul`
 	margin-right: 30px;
 	display: flex;
+
+	@media screen and (max-width: 1000px) {
+		width: 100%;
+		justify-content: flex-end;
+	}
 `;
 
 const Item = styled.li`
