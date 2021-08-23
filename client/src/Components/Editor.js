@@ -9,7 +9,11 @@ const Container = styled.div`
     align-items: center;
 `;
 
-const SForm = styled.form``;
+const SForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
 
 const Input = styled.input``;
 
