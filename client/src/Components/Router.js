@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import styled from "styled-components";
 

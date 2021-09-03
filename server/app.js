@@ -1,14 +1,21 @@
 import express from "express";
 import axios from "axios";
-import Article from "../client/src/Components/Article";
+import cors from "cors";
+import bodyParser from "body-parser";
+// dummy datas
 
-const PORT = 4000;
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
 	res.send("Hello world!");
 });
 
-app.listen(PORT, () => {
-	console.log(`your app is running at http://localhost:${PORT}`);
+app.get("/articles", (req, res) => {
+	res.send("here you are!");
 });
+
+export default app;

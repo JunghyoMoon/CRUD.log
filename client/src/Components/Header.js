@@ -27,33 +27,37 @@ const Title = styled.h1`
 	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 	margin-left: 25px;
 	font-size: 3em;
+
 	@media screen and (max-width: 1000px) {
 		margin-bottom: 15px;
+		font-size: 2em;
 	}
 `;
 
 const Items = styled.ul`
 	margin-right: 30px;
 	display: flex;
+	font-size: 30px;
 
 	@media screen and (max-width: 1000px) {
 		width: 100%;
 		justify-content: flex-end;
+		font-size: 20px;
 	}
 `;
 
 const Item = styled.li`
 	z-index: 5;
-	font-size: 30px;
 	margin-right: 30px;
 	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+
 	&:last-child {
 		margin-right: 0px;
 	}
 	&:hover {
 		opacity: 0.6;
 	}
-	transition: opacity 0.2s ease-in-out;
 `;
 
 const Header = () => (
