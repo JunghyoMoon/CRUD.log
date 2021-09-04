@@ -25,4 +25,15 @@ app.get("/articles/:id", (req, res) => {
 	res.send(result);
 });
 
+app.get("/category/:categoryName", (req, res) => {
+	const { categoryName } = req.params;
+	const result = [];
+	articles.forEach((article) => {
+		if (article.category.includes(categoryName)) {
+			result.push(article);
+		}
+	});
+	res.send(result);
+});
+
 export default app;

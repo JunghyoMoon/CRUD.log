@@ -8,6 +8,7 @@ import Nav from "./Nav";
 import Home from "../Routes/Home";
 import Login from "../Routes/Login";
 import Details from "../Routes/Details";
+import Category from "../Routes/Category";
 import Edit from "../Routes/Edit";
 import Create from "../Routes/Create";
 import Search from "../Routes/Search";
@@ -59,7 +60,7 @@ const Router = () => (
 					<Route path="/login" component={Login} />
 					<Route path="/search" component={Search} />
 					<Route path="/create" component={Create} />
-					{/* todo: category/:category */}
+					<Route path="/category/:categoryName" component={Category} />
 					<Route path="/edit/:id" component={Edit} />
 					<Route path="/details/:id" component={Details} />
 					<Redirect from="*" to="/" />

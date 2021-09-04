@@ -21,6 +21,7 @@ class DetailsContainer extends React.Component {
 				},
 			} = this.props;
 			const { data } = await getArticle(id);
+			// todo: get comments.. by id?
 			this.setState({ data });
 		} catch (error) {
 			this.setState({ error: "Cannot get this article." });

@@ -1,7 +1,7 @@
 const articles = [
 	{
 		id: 1,
-		category: "html, css",
+		category: ["html-css"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "html, css 기초",
@@ -19,7 +19,7 @@ const articles = [
 	},
 	{
 		id: 2,
-		category: "react",
+		category: ["react"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "react 기초",
@@ -37,7 +37,7 @@ const articles = [
 	},
 	{
 		id: 3,
-		category: "mysql",
+		category: ["mysql"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "mysql 기초",
@@ -55,7 +55,7 @@ const articles = [
 	},
 	{
 		id: 4,
-		category: "personal",
+		category: ["personal"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "오늘의 일기",
@@ -73,7 +73,7 @@ const articles = [
 	},
 	{
 		id: 5,
-		category: "html, css",
+		category: ["html-css"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "css 그리드, 플렉스박스",
@@ -91,7 +91,7 @@ const articles = [
 	},
 	{
 		id: 6,
-		category: "react",
+		category: ["react"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "react hooks",
@@ -109,7 +109,7 @@ const articles = [
 	},
 	{
 		id: 7,
-		category: "mysql",
+		category: ["mysql"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "mysql join",
@@ -127,7 +127,7 @@ const articles = [
 	},
 	{
 		id: 8,
-		category: "personal",
+		category: ["personal"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "혼자서 공부를 지속하는 방법",
@@ -145,7 +145,7 @@ const articles = [
 	},
 	{
 		id: 9,
-		category: "html, css",
+		category: ["html-css"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "html의 시멘틱 태그",
@@ -163,7 +163,7 @@ const articles = [
 	},
 	{
 		id: 10,
-		category: "react",
+		category: ["react"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "props and state",
@@ -181,7 +181,7 @@ const articles = [
 	},
 	{
 		id: 11,
-		category: "mysql",
+		category: ["mysql"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "express와 연결하기",
@@ -199,7 +199,7 @@ const articles = [
 	},
 	{
 		id: 12,
-		category: "personal",
+		category: ["personal"],
 		date: "21.8.17",
 		author: "hyo",
 		title: "자바스크립트 면접질문 모음",

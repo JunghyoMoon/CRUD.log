@@ -6,7 +6,7 @@
 	"author": "junghyoMoon, shinhupKim",
 	"license": "MIT",
 	"scripts": {
-		"start:server": "nodemon --exec babel-node server/init.js",
+		"start:server": "nodemon --exec babel-node server/init.js --watch server",
 		"start:client": "webpack serve --mode=development",
 		"build:server": "",
 		"build:client": "webpack --mode=production",
