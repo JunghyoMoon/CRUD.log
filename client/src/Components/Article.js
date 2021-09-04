@@ -71,29 +71,24 @@ const Item = styled.li`
 	}
 `;
 
-const Article = ({ title, img, desc, date, author, reply, views }) => (
+const Article = ({ title, img, desc, date, author, comments, views }) => (
 	<Link to="/details/5">
 		<Container>
 			<Main className="main">
 				<Img src={img} alt="img" />
-				<Title>[Title]</Title>
+				<Title>{`[${title}]`}</Title>
 			</Main>
 			<Info>
-				<Desc>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. D..
-				</Desc>
+				<Desc>{desc}</Desc>
 				<Date>
-					<span>21.8.17</span>
+					<span>{date}</span>
 				</Date>
 				<Items>
-					<Item>Hyo</Item>
+					<Item>{author}</Item>
 					<Item>
-						<span>댓글 0</span>
+						<span>댓글 {comments}</span>
 						<span>|</span>
-						<span>조회 200</span>
+						<span>조회 {views}</span>
 					</Item>
 				</Items>
 			</Info>

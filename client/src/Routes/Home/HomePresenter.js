@@ -12,22 +12,24 @@ const Container = styled.div`
 	grid-gap: 20px;
 `;
 
-// 삭제 예정
-const backgroundArray = [
-	"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.iahbYjphVbjSQaWHFCTOlgHaDj%26pid%3DApi&f=1",
-	"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.EntHChgUyirgbZ9A3zTxkAHaFj%26pid%3DApi&f=1",
-	"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3of4QJ65oynrDrNpgHYXTgHaD4%26pid%3DApi&f=1",
-	"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.p4PedUSIPTyRyztLE0wvAwHaEo%26pid%3DApi&f=1",
-	"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.-UxRkS1XKkPRaBTG5aGVSAHaHa%26pid%3DApi&f=1",
-];
-
-const HomePresenter = () => (
-	<Container>
-		{backgroundArray.map((bg) => {
-			console.log(bg);
-			return <Article img={bg} />;
-		})}
-	</Container>
-);
+const HomePresenter = ({ loading, articles }) =>
+	loading ? (
+		<Loading />
+	) : (
+		<Container>
+			{articles.map((article, index) => (
+				<Article
+					key={index}
+					title={article.title}
+					img={article.img_url}
+					desc={article.description}
+					date={article.date}
+					author={article.author}
+					comments={article.comment.comment_count}
+					views={article.views}
+				/>
+			))}
+		</Container>
+	);
 
 export default HomePresenter;

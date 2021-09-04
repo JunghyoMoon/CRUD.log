@@ -3,6 +3,7 @@ import axios from "axios";
 import cors from "cors";
 import bodyParser from "body-parser";
 // dummy datas
+import articles from "./dummyData/articles";
 
 const app = express();
 
@@ -15,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/articles", (req, res) => {
-	res.send("here you are!");
+	res.send(articles);
 });
 
 export default app;
