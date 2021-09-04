@@ -1,11 +1,15 @@
-2021.8.16 시작
+# 작업진행상황
 
+완전히 전념해서 작업할순 없지만.. 최대한 열심히 꾸준하게 작업중  
+구현한 것들 위주로 작성중
 
-프론트에서는 다음과 같이 데이터를 요청하려 합니다.
+## 21.9.4
 
-게시글 관련  
-GET "https://localhost:3001/articles"  -> 전체 글 요청 (홈, 최초 접속시)  
-GET "https://localhost:3001/articles?id=123456" -> id에 따른 개별 글 요청 (detail 페이지 접속)  
-PUT "https://localhost:3001/articles?id=123456" + 수정한 데이터 -> id에 따른 개별 글의 수정  
-DELETE "https://localhost:3001/articles?id=123456" -> id에 따른 개별 글의 삭제  
-POST "https://localhost:3001/create" + 작성한 데이터 -> 게시글 생성  
+- [x] 홈 컴포넌트, 디테일 컴포넌트 완성(api 요청, 대략적인 화면구성)  
+- [x] 카테고리 컴포넌트 80% 완성 + 버그가 있음  
+- [x] 더미서버 제작해서 작업중 (getArticles, getArticle(id), getCategory)
+- [x] 더미서버에 cors 미들웨어 적용, body-parser 적용
+
+- 오늘 작업간 이슈  
+category 별로 categoryName을 parameter로 정해서 라우터를 구성했는데, 카테고리 탭을 누르면 처음 한번은 잘 작동하나 그 다음부터는 작동하지 않음.  
+이는 아마 모든 라우터가 category 컴포넌트를 공유하기 때문? 카테고리마다 컨테이너를 다르게 만들어야 하나?
