@@ -19,4 +19,10 @@ app.get("/articles", (req, res) => {
 	res.send(articles);
 });
 
+app.get("/articles/:id", (req, res) => {
+	const { id } = req.params;
+	const result = articles.find((article) => article.id === parseInt(id));
+	res.send(result);
+});
+
 export default app;

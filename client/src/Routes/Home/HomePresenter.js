@@ -20,6 +20,7 @@ const HomePresenter = ({ loading, articles }) =>
 			{articles.map((article, index) => (
 				<Article
 					key={index}
+					id={article.id}
 					title={article.title}
 					img={article.img_url}
 					desc={article.description}

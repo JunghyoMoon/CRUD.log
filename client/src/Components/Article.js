@@ -71,8 +71,8 @@ const Item = styled.li`
 	}
 `;
 
-const Article = ({ title, img, desc, date, author, comments, views }) => (
-	<Link to="/details/5">
+const Article = ({ id, title, img, desc, date, author, comments, views }) => (
+	<Link to={`/details/${id}`}>
 		<Container>
 			<Main className="main">
 				<Img src={img} alt="img" />
