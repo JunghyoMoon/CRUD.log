@@ -61,10 +61,7 @@ const Router = () => (
 					<Route path="/search" component={Search} />
 					<Route path="/create" component={Create} />
 					{/* todo: 카테고리 라우터 간소화할 방법 찾기, 오류 해결 */}
-					<Route path="/html-css" component={Category} />
-					<Route path="/react" component={Category} />
-					<Route path="/mysql" component={Category} />
-					<Route path="/personal" component={Category} />
+					<Route path="/category/:categoryName" component={Category} />
 					<Route path="/edit/:id" component={Edit} />
 					<Route path="/details/:id" component={Details} />
 					<Redirect from="*" to="/" />

@@ -47,16 +47,16 @@ const Nav = () => (
 			<StyledLink to="/">
 				<Item>All</Item>
 			</StyledLink>
-			<StyledLink to="/html-css">
+			<StyledLink to="/category/html-css">
 				<Item>HTML, CSS</Item>
 			</StyledLink>
-			<StyledLink to="/react">
+			<StyledLink to="/category/react">
 				<Item>React</Item>
 			</StyledLink>
-			<StyledLink to="/mysql">
+			<StyledLink to="/category/mysql">
 				<Item>MySQL</Item>
 			</StyledLink>
-			<StyledLink to="/personal">
+			<StyledLink to="/category/personal">
 				<Item>Personal</Item>
 			</StyledLink>
 		</Wrapper>

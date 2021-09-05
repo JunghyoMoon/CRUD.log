@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CategoryPresenter from "./CategoryPresenter";
 import { getCategory } from "../../api";
 
@@ -12,11 +12,7 @@ class CategoryContainer extends React.Component {
 		};
 	}
 
-	async componentDidMount() {
-		const {
-			location: { pathname },
-		} = this.props;
-		const categoryName = pathname.split("/")[1];
+	async getArticlesByCategory(categoryName) {
 		try {
 			const { data } = await getCategory(categoryName);
 			this.setState({ result: data });
@@ -25,6 +21,26 @@ class CategoryContainer extends React.Component {
 			console.log(error);
 		} finally {
 			this.setState({ loading: false });
+		}
+	}
+
+	componentDidMount() {
+		const {
+			match: {
+				params: { categoryName },
+			},
+		} = this.props;
+		this.getArticlesByCategory(categoryName);
+	}
+
+	componentDidUpdate(prevProps) {
+		const {
+			match: {
+				params: { categoryName },
+			},
+		} = this.props;
+		if (prevProps.match.params.categoryName !== categoryName) {
+			this.getArticlesByCategory(categoryName);
 		}
 	}
 
