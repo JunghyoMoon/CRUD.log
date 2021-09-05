@@ -27,10 +27,6 @@ const Title = styled.h3`
 
 const StyledLink = styled(Link)`
 	width: 100%;
-
-	&:hover {
-		background-color: ${palette.mainBg};
-	}
 `;
 
 const Item = styled.div`
@@ -38,29 +34,37 @@ const Item = styled.div`
 	padding: 20px;
 	font-size: 20px;
 	text-align: left;
+	background-color: ${(props) => (props.selected ? palette.mainBg : "none")};
+
+	&:hover {
+		background-color: ${palette.mainBg};
+	}
 `;
 
-const Nav = () => (
-	<Container>
-		<Wrapper>
-			<Title>Categories</Title>
-			<StyledLink to="/">
-				<Item>All</Item>
-			</StyledLink>
-			<StyledLink to="/category/html-css">
-				<Item>HTML, CSS</Item>
-			</StyledLink>
-			<StyledLink to="/category/react">
-				<Item>React</Item>
-			</StyledLink>
-			<StyledLink to="/category/mysql">
-				<Item>MySQL</Item>
-			</StyledLink>
-			<StyledLink to="/category/personal">
-				<Item>Personal</Item>
-			</StyledLink>
-		</Wrapper>
-	</Container>
-);
+const Nav = ({ location: { pathname } }) => {
+	console.log(pathname);
+	return (
+		<Container>
+			<Wrapper>
+				<Title>Categories</Title>
+				<StyledLink to="/">
+					<Item selected={pathname === "/"}>All</Item>
+				</StyledLink>
+				<StyledLink to="/category/html-css">
+					<Item selected={pathname === "/category/html-css"}>HTML, CSS</Item>
+				</StyledLink>
+				<StyledLink to="/category/react">
+					<Item selected={pathname === "/category/react"}>React</Item>
+				</StyledLink>
+				<StyledLink to="/category/mysql">
+					<Item selected={pathname === "/category/mysql"}>MySQL</Item>
+				</StyledLink>
+				<StyledLink to="/category/personal">
+					<Item selected={pathname === "/category/personal"}>Personal</Item>
+				</StyledLink>
+			</Wrapper>
+		</Container>
+	);
+};
 
 export default withRouter(Nav);
