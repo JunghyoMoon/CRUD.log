@@ -14,10 +14,9 @@ class CategoryContainer extends React.Component {
 
 	async componentDidMount() {
 		const {
-			match: {
-				params: { categoryName },
-			},
+			location: { pathname },
 		} = this.props;
+		const categoryName = pathname.split("/")[1];
 		try {
 			const { data } = await getCategory(categoryName);
 			this.setState({ result: data });

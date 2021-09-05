@@ -40,7 +40,6 @@ const Item = styled.div`
 	text-align: left;
 `;
 
-// todo : 조작성 향상을 위해 Link를 Item 바깥으로 뺄 것.
 const Nav = () => (
 	<Container>
 		<Wrapper>
@@ -48,16 +47,16 @@ const Nav = () => (
 			<StyledLink to="/">
 				<Item>All</Item>
 			</StyledLink>
-			<StyledLink to="/category/html-css">
+			<StyledLink to="/html-css">
 				<Item>HTML, CSS</Item>
 			</StyledLink>
-			<StyledLink to="/category/react">
+			<StyledLink to="/react">
 				<Item>React</Item>
 			</StyledLink>
-			<StyledLink to="/category/mysql">
+			<StyledLink to="/mysql">
 				<Item>MySQL</Item>
 			</StyledLink>
-			<StyledLink to="/category/personal">
+			<StyledLink to="/personal">
 				<Item>Personal</Item>
 			</StyledLink>
 		</Wrapper>
