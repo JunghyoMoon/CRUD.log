@@ -11,11 +11,14 @@ class SearchContainer extends React.Component {
 		};
 	}
 
-	handleSubmit = () => {
+	handleSubmit = (event) => {
+		event.preventDefault();
 		console.log("just submitted");
+		// fetch data by term
 	};
 
 	render() {
+		console.log(this.props);
 		return <SearchPresenter handleSubmit={this.handleSubmit} />;
 	}
 }

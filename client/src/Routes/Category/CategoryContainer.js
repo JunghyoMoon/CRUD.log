@@ -17,7 +17,7 @@ class CategoryContainer extends React.Component {
 			const { data } = await getCategory(categoryName);
 			this.setState({ result: data });
 		} catch (error) {
-			this.setState({ error: "Cannot get articles with this dategory." });
+			this.setState({ error: "Cannot get articles with this category." });
 			console.log(error);
 		} finally {
 			this.setState({ loading: false });

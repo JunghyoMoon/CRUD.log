@@ -36,4 +36,8 @@ app.get("/category/:categoryName", (req, res) => {
 	res.send(result);
 });
 
+app.get("/search/:title", (req, res) => {
+	const { title } = req.params;
+});
+
 export default app;

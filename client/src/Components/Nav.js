@@ -42,7 +42,6 @@ const Item = styled.div`
 `;
 
 const Nav = ({ location: { pathname } }) => {
-	console.log(pathname);
 	return (
 		<Container>
 			<Wrapper>
