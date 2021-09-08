@@ -59,7 +59,7 @@ const SearchPresenter = ({ handleSubmit }) => (
 	<Container>
 		<SearchWrapper>
 			<Form onSubmit={handleSubmit}>
-				<Input placeholder="search articles by title.."></Input>
+				<Input placeholder="search articles by ..."></Input>
 				<Submit>search</Submit>
 			</Form>
 		</SearchWrapper>
