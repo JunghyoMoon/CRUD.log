@@ -58,7 +58,46 @@ const Img = styled.img`
 
 const Article = styled.article``;
 
-const DetailsPresenter = ({ loading, data, comments }) =>
+const UpdateButtons = styled.div`
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+`;
+
+const UpdateButton = styled.button`
+	width: 100px;
+	padding: 10px 0px;
+	background-color: ${palette.headerBg};
+	color: ${palette.white};
+	border: none;
+	border-radius: 7px;
+	opacity: 0.6;
+	transition: opacity 0.2s ease-in-out;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:active {
+		-webkit-box-shadow: 5px 5px 15px -1px #000000;
+		box-shadow: 5px 5px 15px -1px #000000;
+		transform: translateY(2px);
+	}
+
+	&:first-child {
+		margin-right: 15px;
+	}
+`;
+
+const DetailsPresenter = ({
+	loading,
+	data,
+	comments,
+	handleEditBtn,
+	handleDeleteBtn,
+}) =>
 	loading ? (
 		<Loading />
 	) : (
@@ -77,6 +116,10 @@ const DetailsPresenter = ({ loading, data, comments }) =>
 				<Line />
 				<Img src={data.img_url} />
 				<Article>{data.content}</Article>
+				<UpdateButtons>
+					<UpdateButton onClick={handleEditBtn}>Edit</UpdateButton>
+					<UpdateButton onClick={handleDeleteBtn}>Delete</UpdateButton>
+				</UpdateButtons>
 			</Wrapper>
 			<Wrapper>comment here</Wrapper>
 		</Container>

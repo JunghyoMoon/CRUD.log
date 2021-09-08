@@ -31,10 +31,24 @@ class DetailsContainer extends React.Component {
 		}
 	}
 
+	handleEditBtn = () => {
+		console.log("todo: go to edit page, with this article's contents.");
+	};
+
+	handleDeleteBtn = () => {
+		console.log("Ask user 'are you sure?'");
+	};
+
 	render() {
 		const { loading, data, comments } = this.state;
 		return (
-			<DetailsPresenter loading={loading} data={data} comments={comments} />
+			<DetailsPresenter
+				loading={loading}
+				data={data}
+				comments={comments}
+				handleEditBtn={this.handleEditBtn}
+				handleDeleteBtn={this.handleDeleteBtn}
+			/>
 		);
 	}
 }
