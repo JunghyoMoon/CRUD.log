@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import palette from "../../palette";
+import Article from "../../Components/Article";
+import Loading from "../../Components/Loading";
 
 const Container = styled.div`
 	width: 100%;
@@ -55,7 +57,7 @@ const ResultsWrapper = styled.div`
 	grid-gap: 20px;
 `;
 
-const SearchPresenter = ({ handleSubmit }) => (
+const SearchPresenter = ({ loading, error, articles, handleSubmit }) => (
 	<Container>
 		<SearchWrapper>
 			<Form onSubmit={handleSubmit}>
@@ -63,7 +65,25 @@ const SearchPresenter = ({ handleSubmit }) => (
 				<Submit>search</Submit>
 			</Form>
 		</SearchWrapper>
-		<ResultsWrapper>results</ResultsWrapper>
+		{loading ? (
+			<Loading />
+		) : (
+			<ResultsWrapper>
+				{articles.map((article, index) => (
+					<Article
+						key={index}
+						id={article.id}
+						title={article.title}
+						img={article.img_url}
+						desc={article.description}
+						date={article.date}
+						author={article.author}
+						comments={article.comment.comment_count}
+						views={article.views}
+					/>
+				))}
+			</ResultsWrapper>
+		)}
 	</Container>
 );
 

@@ -38,6 +38,13 @@ app.get("/category/:categoryName", (req, res) => {
 
 app.get("/search/:title", (req, res) => {
 	const { title } = req.params;
+	const result = [];
+	articles.forEach((article) => {
+		if (article.title.includes(title)) {
+			result.push(article);
+		}
+	});
+	res.send(result);
 });
 
 export default app;
