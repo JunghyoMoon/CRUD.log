@@ -16,7 +16,6 @@ class SearchContainer extends React.Component {
 		this.setState({ loading: true });
 		try {
 			const { data } = await searchByTitle(term);
-			console.log(data);
 			this.setState({ result: data });
 		} catch (error) {
 			this.setState({ error: "Cannot get articles with this term." });
